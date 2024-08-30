@@ -1,0 +1,177 @@
+/*
+Nama  : Stan Fredheric
+NPM   : 140810230046
+Kelas : B
+*/
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Pendaftaran</title>
+  <style>
+    body
+    {
+      font-family: Arial, sans-serif;
+      background-color: lightyellow;
+      margin: 30px;
+    }
+
+    .container
+    {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1
+    {
+      text-align: center;
+    }
+
+    form
+    {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label
+    {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    select
+    {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea
+    {
+      resize: none;
+    }
+
+    .radio-group
+    {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .radio-group label
+    {
+      margin: 0;
+    }
+
+    .hobbies
+    {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"]
+    {
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover
+    {
+      background-color: #1c86ee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Form Pendaftaran</h1>
+    <form>
+      <label for="npm">NPM:</label>
+      <input type="text" id="npm" name="npm" pattern="\d*" inputmode="numeric" required>
+
+      <label for="name">Nama Lengkap:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Alamat:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label>Jenis Kelamin:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" id="male" name="gender" value="male" required>
+          Laki-laki
+        </label>
+        <label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          Perempuan
+        </label>
+      </div>
+
+      <label for="year">Angkatan:</label>
+      <select id="year" name="year" required>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+      </select>
+
+      <label>Kelas:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" id="classA" name="class" value="A" required>
+          A
+        </label>
+        <label>
+          <input type="radio" id="classB" name="class" value="B" required>
+          B
+        </label>
+      </div>
+
+      <label>Hobi:</label>
+      <div class="hobbies">
+        <label>
+          <input type="checkbox" id="hobby1" name="hobby" value="reading">
+          Membaca
+        </label>
+        <label>
+          <input type="checkbox" id="hobby2" name="hobby" value="traveling">
+          Traveling
+        </label>
+        <label>
+          <input type="checkbox" id="hobby3" name="hobby" value="sports">
+          Olahraga
+        </label>
+        <label>
+          <input type="checkbox" id="hobby4" name="hobby" value="music">
+          Mendengarkan Musik
+        </label>
+        <label>
+          <input type="checkbox" id="hobby5" name="hobby" value="gaming">
+          Bermain Game
+        </label>
+        <label>
+          <input type="checkbox" id="otherHobby" name="hobby" value="other">
+          Lainnya:
+          <input type="text" id="otherHobbyText" name="otherHobbyText" placeholder="Sebutkan Hobi Lainnya">
+        </label>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
