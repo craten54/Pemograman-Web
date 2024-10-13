@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+a {
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+}
+
+h1 {
+    color: green;
+}
